@@ -1,0 +1,118 @@
+.sidebar {
+  height: 100vh;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  background: #fff;
+  position: relative;
+  border: 1px solid #d9e0e9;
+}
+.sidebar.opened {
+  width: 300px;
+}
+.sidebar.closed {
+  width: 100px;
+}
+
+.sidebar-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.sidebar .logo a {
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.sidebar .logo a > span {
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 34px;
+  color: #e407d1;
+}
+.sidebar .logo > a {
+  font-size: 28px;
+  text-decoration: none;
+  color: #0023c4;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.burger-btn {
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  font-size: 26px;
+  background: #e2e8f0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  left: 270px;
+  transition: all 0.2s ease-in-out;
+}
+
+.burger-btn.closed {
+  left: 115px;
+  background: #fff;
+  rotate: 180deg;
+}
+
+.sidebar :where(.sidebar-top, ul) {
+  overflow: hidden;
+}
+
+.sidebar > ul {
+  width: 100%;
+  padding: 0 20px;
+  height: max-content;
+}
+.sidebar > ul > li {
+  list-style: none;
+  margin-bottom: 15px;
+  font: 500 20px "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar > ul > li > a {
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px 15px;
+  color: #68788e;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+}
+
+ul > li a.active {
+  background: #f0f2ff;
+  color: #0023c4;
+  font-weight: 700;
+}
+.sidebar > ul > li a:hover:not(.active) {
+  background: #e2e8f0;
+  color: #243248;
+  font-weight: 600;
+}
+
+.sidebar ul li > a > span {
+  vertical-align: baseline;
+  margin-right: 10px;
+  height: 22px;
+}
+
+.sidebar ul > li a.closed {
+  width: max-content;
+  text-align: center;
+  padding: 12px;
+}
+
+.sidebar ul > li a.closed > span {
+  margin-right: 0px;
+}
